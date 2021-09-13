@@ -60,7 +60,6 @@ public class LoginPage {
 	}
 	
 	public AccountPage doLogin(String un, String pwd) {
-		System.out.println("login with: " + un + " and " + pwd);
 		emailid.sendKeys(un);
 		password.sendKeys(pwd);
 		SignInButton.click();

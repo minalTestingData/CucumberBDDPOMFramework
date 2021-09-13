@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.qa.factory.DriverFactory;
 import com.qa.pages.LoginPage;
+import com.qa.utils.ConfigReader;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,11 +14,13 @@ import io.cucumber.java.en.When;
 
 public class LoginPageSteps {
 	private String title, accPageUrl;
+	private ConfigReader configReader;
 	LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
 
 	@Given("user is on Home page")
 	public void user_is_on_home_page() {
-		DriverFactory.getDriver().get("http://automationpractice.com/index.php");
+		configReader = new ConfigReader();
+		DriverFactory.getDriver().get(configReader.init_prop().getProperty("url"));
 	}
 
 	@When("user clicks on Sign in button")

@@ -14,6 +14,7 @@ Given user should be on login page
 Then Forgot your password link should be displayed
 
 Scenario: Login with registed credentials
+Given user should be on login page
 When user enters email address "minaldukare@gmail.com"
 And user enters password "Riyansh@987"
 And click on Sign in button
@@ -26,6 +27,7 @@ When user clicks on Sign out
 Then user should be on login page 
 
 Scenario: Create a new account
+Given user should be on login page
 When user enters email address "minalD@gmail.com"
 And clicks on Create an account button
 Then user gets the title of page
