@@ -1,0 +1,7 @@
+com\qa\pages\LoginPage.class
+com\qa\factory\DriverFactory.class
+com\qa\pages\AccountPage.class
+com\qa\pages\RegisterPage.class
+com\qa\utils\ConfigReader.class
+com\qa\utils\ExcelReader.class
+com\qa\pages\PersonalInformationPage.class
